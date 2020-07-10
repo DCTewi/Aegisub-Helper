@@ -1,0 +1,27 @@
+{
+  "Retime": {
+    "prefix": "retime",
+    "body": ["!retime(\"${1:syl}\", ${2:0}, ${3:0})!", "$0"],
+    "description": "retime function"
+  },
+  "ReLayer": {
+    "prefix": "relayer",
+    "body": ["!relayer(${1:0})!", "$0"],
+    "description": "relayer function"
+  },
+  "ReStyle": {
+    "prefix": "restyle",
+    "body": ["!restyle(\"${1:Default}\")!", "$0"],
+    "description": "restyle function"
+  },
+  "MaxLoop": {
+    "prefix": "maxloop",
+    "body": ["!maxloop(${1:1})!", "$0"],
+    "description": "maxloop function"
+  },
+  "LoopControl": {
+    "prefix": "loopctl",
+    "body": ["!loopctl(${1:newj}, ${2:newmaxj})!", "$0"],
+    "description": "loopctl function"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Aegisub Lua",
+  "patterns": [
+    {
+      "name": "comment.line.aegs",
+      "match": "--(?!\\[\\[).*\n"
+    },
+    {
+      "name": "comment.block.aegs",
+      "begin": "--\\[\\[",
+      "end": "\\]\\]"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "name": "string.quoted.double.aegs",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.aegs",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "string.quoted.double.aegs",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.aegs",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "string.quoted.double.aegs",
+      "begin": "\\[\\[",
+      "end": "\\]\\]",
+      "patterns": [
+        {
+          "name": "constant.character.escape.aegs",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "constant.numeric.aegs",
+      "match": "(-{0,1}\\d+|\\&H[a-zA-Z0-9]+\\&)"
+    },
+    {
+      "name": "markup.heading.inline-constance.aegs",
+      "match": "\\$[a-zA-Z]+"
+    },
+    {
+      "name": "strong.module-separator.aegs",
+      "match": "(\\[ (_.*|template|code).*|\\[\\s*|\\])\n"
+    },
+    {
+      "name": "entity.name.class.aegisub.lua",
+      "match": "\\\\\\d*[a-zA-Z]+(?=(\\-|\\!|\\d+|\\$|\\()|\\&)"
+    },
+    {
+      "name": "support.function.aegs",
+      "match": "(\\w+(?=\\()|[a-zA-Z_]\\w*(?=\\.))"
+    },
+    {
+      "name": "variable.aegs",
+      "match": "#{0,1}[a-zA-Z_]\\w*"
+    },
+    {
+      "name": "constant.character.aegs",
+      "match": "\\(|\\)|\\[|\\]|\\,|\\!|\\=|\\&|\\+|\\-|\\*|\\/|\\#|\\{|\\}|\\."
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.aegs",
+          "match": "\\b(and|break|do|else|elseif|end|false|for|function|if|in|local|nil|not|or|repeat|return|then|true|until|while|goto)\\b"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.aegs"
+}
