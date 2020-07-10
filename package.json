@@ -11,7 +11,7 @@
     "Snippets"
   ],
   "activationEvents": [
-	"*"
+    "onLanguage:aegs"
   ],
   "main": "./out/extension.js",
   "contributes": {

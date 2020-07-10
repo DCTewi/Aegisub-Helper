@@ -164,6 +164,29 @@ const luakeywords = {
     ],
 };
 
+export const plainTriggerCompletionProvider = vscode.languages.registerCompletionItemProvider(
+    "aegs",
+    {
+        provideCompletionItems(
+            document: vscode.TextDocument,
+            position: vscode.Position,
+            token: vscode.CancellationToken,
+            context: vscode.CompletionContext
+        ) {
+            let allCompletions: vscode.CompletionItem[] = [];
+
+            variables.forEach((x) => {
+                allCompletions.push(new vscode.CompletionItem(x));
+            });
+            keywords.forEach((x) => {
+                allCompletions.push(new vscode.CompletionItem(x));
+            });
+
+            return allCompletions;
+        },
+    }
+);
+
 export const variablesCompletionProvider = vscode.languages.registerCompletionItemProvider(
     "aegs",
     {
@@ -173,9 +196,16 @@ export const variablesCompletionProvider = vscode.languages.registerCompletionIt
             token: vscode.CancellationToken,
             context: vscode.CompletionContext
         ) {
+            const linePrefix = document
+                .lineAt(position)
+                .text.substr(0, position.character);
+            if (!linePrefix.endsWith("$")) {
+                return undefined;
+            }
             let variablesCompletions: vscode.CompletionItem[] = [];
 
             variables.forEach((x) => {
+                x = x.substr(1);
                 variablesCompletions.push(new vscode.CompletionItem(x));
             });
 
@@ -194,9 +224,17 @@ export const keywordsCompletionProvider = vscode.languages.registerCompletionIte
             token: vscode.CancellationToken,
             context: vscode.CompletionContext
         ) {
+            const linePrefix = document
+                .lineAt(position)
+                .text.substr(0, position.character);
+            if (!linePrefix.endsWith("\\")) {
+                return undefined;
+            }
+
             let keywordCompletions: vscode.CompletionItem[] = [];
 
             keywords.forEach((x) => {
+                x = x.substr(1);
                 keywordCompletions.push(new vscode.CompletionItem(x));
             });
 

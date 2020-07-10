@@ -1,13 +1,15 @@
 import * as vscode from "vscode";
 import {
-	variablesCompletionProvider,
+    plainTriggerCompletionProvider,
+    variablesCompletionProvider,
     keywordsCompletionProvider,
     luaCompletionProvider,
 } from "./CompletionProvider";
 
 export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(
-		variablesCompletionProvider,
+        plainTriggerCompletionProvider,
+        variablesCompletionProvider,
         keywordsCompletionProvider,
         luaCompletionProvider
     );
