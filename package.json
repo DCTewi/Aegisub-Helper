@@ -11,16 +11,10 @@
     "Snippets"
   ],
   "activationEvents": [
-    "onCommand:aegisub-karaoke.helloWorld"
+	"*"
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "aegisub-karaoke.helloWorld",
-        "title": "Hello World"
-      }
-    ],
     "languages": [
       {
         "id": "aegs",

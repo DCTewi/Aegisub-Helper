@@ -3,6 +3,9 @@
     "lineComment": "--",
     "blockComment": ["--[[", "]]"]
   },
+  "folding": {
+    "markers": {"start": "%[", "end": "%]"}
+  },
   "brackets": [
     ["{", "}"],
     ["[", "]"],

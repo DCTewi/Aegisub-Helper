@@ -57,7 +57,7 @@
     },
     {
       "name": "strong.module-separator.aegs",
-      "match": "(\\[ (_.*|template|code).*|\\[\\s*|\\])\n"
+      "match": "\\%(\\[|\\]).*\n"
     },
     {
       "name": "entity.name.class.aegisub.lua",

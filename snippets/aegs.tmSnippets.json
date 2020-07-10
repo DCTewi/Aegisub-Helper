@@ -23,5 +23,32 @@
     "prefix": "loopctl",
     "body": ["!loopctl(${1:newj}, ${2:newmaxj})!", "$0"],
     "description": "loopctl function"
+  },
+
+  "New Template Line": {
+    "prefix": "template",
+    "body": [
+      "%[ template ${1:syl} # ${2:comment}",
+      "",
+      "{",
+      "\t\\pos(\\$sx, \\$sy)",
+      "\t$0",
+      "}",
+      "",
+      "%]"
+    ],
+    "description": "new template line"
+  },
+
+  "New Code Line": {
+    "prefix": "code",
+    "body": [
+      "%[ code ${1:once} # ${2:comment}",
+      "",
+      "$0",
+      "",
+      "%]"
+    ],
+    "description": "new code line"
   }
 }
