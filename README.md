@@ -1,65 +1,35 @@
-# aegisub-karaoke README
+# Aegisub-Helper
 
-This is the README for your extension "aegisub-karaoke". After writing up a brief description, we recommend including the following sections.
+This is an extension which can help time-stamper manage and write karaoke subtitle templates on Aegisub.
+
+这是一个帮助特效轴man统筹和撰写Aegisub中歌轴模板的扩展。
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Provides a more user-friendly way and specifications of writing karaoke subtitle templates, as well as the utility to convert to the formats which available in Aegisub.
 
-For example if there is an image subfolder under your extension project workspace:
+提供更人性化的歌轴模板编写方式和规范，以及向Aegisub可用格式转换的功能。
 
-\!\[feature X\]\(images/feature-x.png\)
+Highlighting, completion and snippets.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![UlyfoV.gif](https://s1.ax1x.com/2020/07/11/UlyfoV.gif)
 
-## Requirements
+Compilation.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+![Uly5JU.gif](https://s1.ax1x.com/2020/07/11/Uly5JU.gif)
 
-## Extension Settings
+Just paste to Aegisub.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+![Uly4iT.gif](https://s1.ax1x.com/2020/07/11/Uly4iT.gif)
 
-For example:
+## Usage
 
-This extension contributes the following settings:
+Automatically activated in files with the extension name `.aegs` (which is the meaning of Aegisub Script.)
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+在扩展名为`.aegs`的文件中自动激活（即Aegisub Script）。
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- Initial release of Aegisub-Helper.

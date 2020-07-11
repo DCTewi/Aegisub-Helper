@@ -4,14 +4,14 @@
   "description": "Karaoke subtitle template helper for aegisub",
   "author": "DCTewi",
   "publisher": "DCTewi",
-  "icon": "./configs/aegs.png",
+  "icon": "configs/aegs.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/DCTewi/Aegisub-Helper"
   },
   "version": "1.0.0",
   "engines": {
-    "vscode": "^1.46.0"
+    "vscode": "^1.47.0"
   },
   "categories": [
     "Programming Languages",
