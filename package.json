@@ -1,8 +1,15 @@
 {
   "name": "aegisub-helper",
-  "displayName": "Aegisub-Helper",
+  "displayName": "Aegisub Helper",
   "description": "Karaoke subtitle template helper for aegisub",
-  "version": "0.0.1",
+  "author": "DCTewi",
+  "publisher": "DCTewi",
+  "icon": "./configs/aegs.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DCTewi/Aegisub-Helper"
+  },
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.46.0"
   },
@@ -26,20 +33,20 @@
         "extensions": [
           ".aegs"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "./configs/language-configuration.json"
       }
     ],
     "grammars": [
       {
         "language": "aegs",
         "scopeName": "source.aegs",
-        "path": "./syntaxes/aegs.tmLanguage.json"
+        "path": "./configs/aegs.tmLanguage.json"
       }
     ],
     "snippets": [
       {
         "language": "aegs",
-        "path": "./snippets/aegs.tmSnippets.json"
+        "path": "./configs/aegs.tmSnippets.json"
       }
     ],
     "commands": [
@@ -47,8 +54,16 @@
         "command": "aegisub-helper.compile",
         "title": "%config.compileCommand%"
       }
+    ],
+    "keybindings": [
+      {
+        "command": "aegisub-helper.compile",
+        "key": "ctrl+alt+b",
+        "when": "resourceLangId == aegs"
+      }
     ]
   },
+  
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
@@ -69,6 +84,5 @@
     "mocha": "^7.1.2",
     "typescript": "^3.8.3",
     "vscode-test": "^1.3.0"
-  },
-  "dependencies": {}
+  }
 }
