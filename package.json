@@ -11,7 +11,8 @@
     "Snippets"
   ],
   "activationEvents": [
-    "onLanguage:aegs"
+    "onLanguage:aegs",
+    "onCommand:aegisub-helper.compile"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -40,6 +41,12 @@
         "language": "aegs",
         "path": "./snippets/aegs.tmSnippets.json"
       }
+    ],
+    "commands": [
+      {
+        "command": "aegisub-helper.compile",
+        "title": "%config.compileCommand%"
+      }
     ]
   },
   "scripts": {
@@ -62,5 +69,6 @@
     "mocha": "^7.1.2",
     "typescript": "^3.8.3",
     "vscode-test": "^1.3.0"
-  }
+  },
+  "dependencies": {}
 }

@@ -28,7 +28,7 @@
   "New Template Line": {
     "prefix": "template",
     "body": [
-      "%[ template ${1:syl} # ${2:comment}",
+      "%[ template ${1:syl} # ${2:comment} @ ${3:0}",
       "",
       "{",
       "\t\\pos(\\$sx, \\$sy)",
@@ -43,7 +43,7 @@
   "New Code Line": {
     "prefix": "code",
     "body": [
-      "%[ code ${1:once} # ${2:comment}",
+      "%[ code ${1:once} # ${2:comment} @ ${3:0}",
       "",
       "$0",
       "",
