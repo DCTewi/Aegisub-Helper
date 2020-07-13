@@ -30,6 +30,10 @@ Automatically activated in files with the extension name `.aegs` (which is the m
 
 ## Release Notes
 
+### 1.0.1
+
+- Bug fix.
+
 ### 1.0.0
 
 - Initial release of Aegisub-Helper.
